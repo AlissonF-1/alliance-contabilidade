@@ -20,12 +20,12 @@
                     fontFamily: { sans: ['"Manrope"', 'sans-serif'] },
                     colors: {
                         corporate: {
-                            900: '#0f172a', // Azul Profundo (Trust)
+                            900: '#0f172a', 
                             800: '#1e293b',
                             700: '#334155',
                         },
                         accent: {
-                            500: '#ca8a04', // Dourado (Premium/Money)
+                            500: '#ca8a04', 
                             600: '#a16207'
                         }
                     }
@@ -34,7 +34,6 @@
         }
     </script>
     <style>
-        /* Animação suave para o loading das notícias */
         @keyframes pulse-slow {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
@@ -73,7 +72,8 @@
                 <a href="#home" class="hover:text-corporate-900 transition">Início</a>
                 <a href="#servicos" class="hover:text-corporate-900 transition">Serviços</a>
                 <a href="#sobre" class="hover:text-corporate-900 transition">O Escritório</a>
-                <a href="#news" class="hover:text-corporate-900 transition">Notícias</a> <a href="#contato" class="hover:text-corporate-900 transition">Contato</a>
+                <a href="#news" class="hover:text-corporate-900 transition">Notícias</a> 
+                <a href="#contato" class="hover:text-corporate-900 transition">Contato</a>
             </div>
 
             <div class="hidden md:flex items-center gap-4">
@@ -81,7 +81,7 @@
                     <i data-lucide="lock" class="w-4 h-4"></i>
                     Área do Cliente
                 </a>
-                <a href="#contato" class="bg-accent-500 hover:bg-accent-600 text-white text-sm font-bold px-6 py-2.5 rounded-lg transition shadow-lg shadow-accent-500/20">
+                <a href="https://wa.me/5586999999999?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20contador." target="_blank" class="bg-accent-500 hover:bg-accent-600 text-white text-sm font-bold px-6 py-2.5 rounded-lg transition shadow-lg shadow-accent-500/20">
                     Falar com Contador
                 </a>
             </div>
@@ -95,7 +95,7 @@
             <a href="#sobre" class="block font-medium text-slate-700">O Escritório</a>
             <a href="#news" class="block font-medium text-slate-700">Notícias</a>
             <a href="#" class="block w-full text-center py-3 border border-slate-200 rounded-lg font-bold text-corporate-900">Área do Cliente</a>
-            <a href="#contato" class="block w-full text-center py-3 bg-accent-500 text-white rounded-lg font-bold">Falar no WhatsApp</a>
+            <a href="https://wa.me/5586999999999" target="_blank" class="block w-full text-center py-3 bg-accent-500 text-white rounded-lg font-bold">Falar no WhatsApp</a>
         </div>
     </nav>
 
@@ -117,7 +117,7 @@
                     Deixe a burocracia com a gente. Focamos na saúde financeira da sua empresa enquanto você foca em vender mais.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contato" class="inline-flex justify-center items-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition">
+                    <a href="https://wa.me/5586999999999?text=Quero%20abrir%20minha%20empresa" target="_blank" class="inline-flex justify-center items-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition">
                         Quero Abrir Minha Empresa
                     </a>
                     <a href="#servicos" class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white font-bold rounded-lg transition">
@@ -251,13 +251,13 @@
 
                 <div class="md:w-1/2 w-full bg-slate-50 p-8 rounded-2xl border border-slate-200">
                     <form id="contactForm" class="space-y-4">
-                        <input type="text" placeholder="Seu Nome" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
-                        <input type="text" placeholder="Nome da Empresa" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
-                        <input type="tel" placeholder="WhatsApp" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
-                        <textarea rows="3" placeholder="Como podemos ajudar?" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition"></textarea>
+                        <input id="formNome" type="text" placeholder="Seu Nome" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition" required>
+                        <input id="formEmpresa" type="text" placeholder="Nome da Empresa" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
+                        <input id="formZap" type="tel" placeholder="Seu WhatsApp" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
+                        <textarea id="formMsg" rows="3" placeholder="Como podemos ajudar?" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition" required></textarea>
                         
-                        <button type="submit" class="w-full bg-corporate-900 text-white font-bold py-3 rounded-lg hover:bg-corporate-800 transition shadow-lg">
-                            Enviar Mensagem
+                        <button type="submit" class="w-full bg-corporate-900 text-white font-bold py-3 rounded-lg hover:bg-corporate-800 transition shadow-lg flex justify-center items-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i> Enviar Mensagem
                         </button>
                     </form>
                 </div>
@@ -324,35 +324,44 @@
         </div>
     </footer>
 
-    <a href="#" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 animate-bounce">
+    <a href="https://wa.me/5586999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 animate-bounce">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
     <script>
-        // Inicialização Bibliotecas Visuais
         lucide.createIcons();
         AOS.init();
 
-        // Menu Mobile
+        // Mude aqui para atualizar o formulário automaticamente
+        const PHONE_NUMBER = "5586988767843"; 
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Form Submission
+        // Formulário Inteligente -> Envia direto pro WhatsApp
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert("Em um site real, isso abriria o WhatsApp do escritório!");
+            
+            // Pega os dados dos campos (adicionei IDs no HTML acima)
+            const nome = document.getElementById('formNome').value;
+            const empresa = document.getElementById('formEmpresa').value || "Sem empresa";
+            const msg = document.getElementById('formMsg').value;
+            
+            // Cria a mensagem formatada
+            const text = `*Novo Lead pelo Site* 🚀\n\n*Nome:* ${nome}\n*Empresa:* ${empresa}\n*Mensagem:* ${msg}`;
+            
+            // Cria o link e abre em nova aba
+            const url = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
         });
 
-        /* LÓGICA DO WIDGET DE NOTÍCIAS (COM SISTEMA ANTIFALHA) */
-        
-        // Configuração
-        const RSS_URL = 'https://www.jornalcontabil.com.br/feed/'; // Troquei para uma fonte que costuma bloquear menos
+        /* WIDGET DE NOTÍCIAS (Backup System) */
+        const RSS_URL = 'https://www.jornalcontabil.com.br/feed/';
         const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
 
-        // Notícias de Reserva (Fallback) - Para o site nunca ficar vazio
         const BACKUP_NEWS = [
             {
                 title: "Receita Federal atualiza regras para declaração do IRPF 2026",
@@ -373,13 +382,12 @@
 
         function renderNews(items) {
             const container = document.getElementById('news-container');
-            container.innerHTML = ''; // Limpa o esqueleto/loading
+            container.innerHTML = ''; 
 
             items.forEach((item, index) => {
-                // Formatação de data segura
                 let dateFormatted;
                 try {
-                    const dateObj = new Date(item.pubDate.replace(/-/g, "/")); // Fix para compatibilidade Safari/alguns browsers
+                    const dateObj = new Date(item.pubDate.replace(/-/g, "/"));
                     dateFormatted = dateObj.toLocaleDateString('pt-BR');
                 } catch (e) {
                     dateFormatted = "Recente";
@@ -403,33 +411,23 @@
                 `;
                 container.innerHTML += card;
             });
-            
-            lucide.createIcons(); // Recarrega ícones
+            lucide.createIcons();
         }
 
         async function fetchNews() {
             try {
                 const response = await fetch(API_URL);
                 const data = await response.json();
-
                 if (data.status === 'ok' && data.items.length > 0) {
-                    // Sucesso: Usa as notícias da API
                     renderNews(data.items.slice(0, 3));
                 } else {
-                    throw new Error('API retornou status inválido ou vazio');
+                    throw new Error('API Error');
                 }
             } catch (error) {
-                console.warn("API indisponível, carregando backup...", error);
-                // Erro: Usa as notícias de backup (Silent Fail)
                 renderNews(BACKUP_NEWS);
-                
-                // Opcional: Avisar no console apenas para o dev
-                document.querySelector('#news span.text-slate-500').innerHTML += ' <span class="text-xs text-amber-500">(Modo Offline)</span>';
             }
         }
-
         document.addEventListener('DOMContentLoaded', fetchNews);
-
     </script>
 </body>
 </html>
