@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance Contabilidade | Assessoria Contábil em Teresina</title>
+    <meta name="description" content="Escritório de contabilidade especializado em abertura de empresas, BPO financeiro e consultoria tributária.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Manrope"', 'sans-serif'] },
+                    colors: {
+                        corporate: {
+                            900: '#0f172a', // Azul Profundo (Trust)
+                            800: '#1e293b',
+                            700: '#334155',
+                        },
+                        accent: {
+                            500: '#ca8a04', // Dourado (Premium/Money)
+                            600: '#a16207'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animação suave para o loading das notícias */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .loading-skeleton {
+            animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-600 antialiased font-sans overflow-x-hidden">
+
+    <div class="bg-corporate-900 text-slate-300 py-2 text-xs md:text-sm border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-4">
+                <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3 h-3 text-accent-500"></i> Teresina, PI</span>
+                <span class="hidden md:flex items-center gap-2"><i data-lucide="clock" class="w-3 h-3 text-accent-500"></i> Seg a Sex: 08h às 18h</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                <a href="#" class="hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2 text-corporate-900 font-extrabold text-2xl tracking-tight">
+                <div class="w-10 h-10 bg-corporate-900 text-white flex items-center justify-center rounded-lg">
+                    <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                </div>
+                ALLIANCE
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#home" class="hover:text-corporate-900 transition">Início</a>
+                <a href="#servicos" class="hover:text-corporate-900 transition">Serviços</a>
+                <a href="#sobre" class="hover:text-corporate-900 transition">O Escritório</a>
+                <a href="#news" class="hover:text-corporate-900 transition">Notícias</a> <a href="#contato" class="hover:text-corporate-900 transition">Contato</a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="flex items-center gap-2 text-sm font-bold text-corporate-900 border border-slate-200 px-4 py-2.5 rounded-lg hover:bg-slate-50 transition">
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                    Área do Cliente
+                </a>
+                <a href="#contato" class="bg-accent-500 hover:bg-accent-600 text-white text-sm font-bold px-6 py-2.5 rounded-lg transition shadow-lg shadow-accent-500/20">
+                    Falar com Contador
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-corporate-900"><i data-lucide="menu" class="w-8 h-8"></i></button>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 p-4 space-y-4 shadow-xl">
+            <a href="#home" class="block font-medium text-slate-700">Início</a>
+            <a href="#servicos" class="block font-medium text-slate-700">Serviços</a>
+            <a href="#sobre" class="block font-medium text-slate-700">O Escritório</a>
+            <a href="#news" class="block font-medium text-slate-700">Notícias</a>
+            <a href="#" class="block w-full text-center py-3 border border-slate-200 rounded-lg font-bold text-corporate-900">Área do Cliente</a>
+            <a href="#contato" class="block w-full text-center py-3 bg-accent-500 text-white rounded-lg font-bold">Falar no WhatsApp</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative py-20 lg:py-32 overflow-hidden bg-corporate-900">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover opacity-20" alt="Escritório Moderno">
+            <div class="absolute inset-0 bg-gradient-to-r from-corporate-900 via-corporate-900/90 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-block px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-accent-500 text-xs font-bold uppercase tracking-wider mb-6">
+                    Assessoria Contábil Especializada
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Contabilidade estratégica para o seu negócio <span class="text-accent-500">crescer.</span>
+                </h1>
+                <p class="text-slate-300 text-lg mb-8 max-w-lg leading-relaxed">
+                    Deixe a burocracia com a gente. Focamos na saúde financeira da sua empresa enquanto você foca em vender mais.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato" class="inline-flex justify-center items-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition">
+                        Quero Abrir Minha Empresa
+                    </a>
+                    <a href="#servicos" class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white font-bold rounded-lg transition">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block relative" data-aos="fade-left">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-accent-500 rounded-full opacity-20 blur-3xl"></div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-2xl max-w-sm ml-auto">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-lg">Economia Tributária</p>
+                            <p class="text-slate-400 text-sm">Recuperação Fiscal</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="h-2 bg-white/10 rounded-full w-full overflow-hidden">
+                            <div class="h-full bg-green-500 w-[85%]"></div>
+                        </div>
+                        <p class="text-slate-300 text-sm text-right">85% de redução de riscos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-corporate-900 mb-4">Soluções completas para sua empresa</h2>
+                <p class="text-slate-500">Atendemos desde profissionais liberais a grandes empresas com a mesma excelência.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent-500 mb-6 group-hover:bg-accent-500 group-hover:text-white transition">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Abertura de Empresas</h3>
+                    <p class="text-slate-500 mb-6">Processo rápido e sem dor de cabeça. Definimos o melhor regime tributário para você pagar menos impostos legalmente.</p>
+                    <a href="#" class="text-accent-600 font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Saiba mais <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent-500 mb-6 group-hover:bg-accent-500 group-hover:text-white transition">
+                        <i data-lucide="calculator" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">BPO Financeiro</h3>
+                    <p class="text-slate-500 mb-6">Terceirize o financeiro da sua empresa. Contas a pagar, receber e fluxo de caixa geridos por especialistas.</p>
+                    <a href="#" class="text-accent-600 font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Saiba mais <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent-500 mb-6 group-hover:bg-accent-500 group-hover:text-white transition">
+                        <i data-lucide="file-text" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Imposto de Renda</h3>
+                    <p class="text-slate-500 mb-6">Segurança para sua pessoa física. Declaração completa, análise de caixa e regularização de pendências.</p>
+                    <a href="#" class="text-accent-600 font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Saiba mais <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-corporate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-accent-500 rounded-2xl rotate-3 opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" class="relative rounded-2xl shadow-2xl" alt="Equipe Contábil" data-aos="fade-right">
+            </div>
+            
+            <div data-aos="fade-left">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Mais que contadores, somos parceiros do seu sucesso.</h2>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Com mais de 10 anos de atuação em Teresina, a Alliance Contabilidade nasceu para simplificar a vida do empreendedor piauiense. Unimos a contabilidade tradicional com tecnologia de ponta.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-8 mt-10">
+                    <div>
+                        <p class="text-4xl font-extrabold text-accent-500 mb-1">+500</p>
+                        <p class="text-sm text-slate-400 uppercase tracking-wider font-bold">Clientes Ativos</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-accent-500 mb-1">98%</p>
+                        <p class="text-sm text-slate-400 uppercase tracking-wider font-bold">Satisfação</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-10 border-t border-slate-700">
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full border-2 border-accent-500" alt="Contador Chefe">
+                        <div>
+                            <p class="font-bold text-white">Dr. Carlos Mendes</p>
+                            <p class="text-xs text-slate-400">Contador Chefe & Sócio Fundador</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-12 items-center" data-aos="zoom-in">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-corporate-900 mb-4">Vamos tomar um café?</h2>
+                    <p class="text-slate-500 mb-8">
+                        Agende uma reunião diagnóstica gratuita. Vamos analisar o momento da sua empresa e propor as melhores soluções tributárias.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-corporate-700">
+                            <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-accent-600"><i data-lucide="phone" class="w-5 h-5"></i></div>
+                            <span class="font-bold">(86) 3222-0000</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-corporate-700">
+                            <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-accent-600"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                            <span>contato@alliancecontab.com.br</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-corporate-700">
+                            <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-accent-600"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                            <span>Av. Dom Severino, 1000 - Fátima, Teresina</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 w-full bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                    <form id="contactForm" class="space-y-4">
+                        <input type="text" placeholder="Seu Nome" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
+                        <input type="text" placeholder="Nome da Empresa" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
+                        <input type="tel" placeholder="WhatsApp" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition">
+                        <textarea rows="3" placeholder="Como podemos ajudar?" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-accent-500 transition"></textarea>
+                        
+                        <button type="submit" class="w-full bg-corporate-900 text-white font-bold py-3 rounded-lg hover:bg-corporate-800 transition shadow-lg">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                <div data-aos="fade-right">
+                    <span class="text-accent-600 font-bold text-sm tracking-wider uppercase">Fique Atualizado</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-corporate-900 mt-2">Giro Contábil & Tributário</h2>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-slate-500" data-aos="fade-left">
+                    <span>Fonte:</span>
+                    <span class="font-bold text-corporate-700 bg-slate-100 px-2 py-1 rounded">Portal Contábeis</span>
+                </div>
+            </div>
+
+            <div id="news-container" class="grid md:grid-cols-3 gap-8">
+                <div class="loading-skeleton bg-slate-50 p-6 rounded-2xl border border-slate-100 h-64"></div>
+                <div class="loading-skeleton bg-slate-50 p-6 rounded-2xl border border-slate-100 h-64"></div>
+                <div class="loading-skeleton bg-slate-50 p-6 rounded-2xl border border-slate-100 h-64"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-corporate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
+                    <i data-lucide="bar-chart-2" class="w-6 h-6"></i> ALLIANCE
+                </div>
+                <p>Contabilidade consultiva e digital em Teresina.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Serviços</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-accent-500">Abertura de Empresa</a></li>
+                    <li><a href="#" class="hover:text-accent-500">BPO Financeiro</a></li>
+                    <li><a href="#" class="hover:text-accent-500">Certificado Digital</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Links Úteis</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-accent-500">Área do Cliente</a></li>
+                    <li><a href="#" class="hover:text-accent-500">Emissão de Guias</a></li>
+                    <li><a href="#" class="hover:text-accent-500">Blog Contábil</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Redes Sociais</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-slate-800 p-2 rounded hover:bg-accent-500 hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="bg-slate-800 p-2 rounded hover:bg-accent-500 hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    <a href="#" class="bg-slate-800 p-2 rounded hover:bg-accent-500 hover:text-white transition"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 text-center">
+            &copy; 2026 Alliance Contabilidade. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <a href="#" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 animate-bounce">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script>
+        // Inicialização Bibliotecas Visuais
+        lucide.createIcons();
+        AOS.init();
+
+        // Menu Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Em um site real, isso abriria o WhatsApp do escritório!");
+        });
+
+        /* LÓGICA DO WIDGET DE NOTÍCIAS (COM SISTEMA ANTIFALHA) */
+        
+        // Configuração
+        const RSS_URL = 'https://www.jornalcontabil.com.br/feed/'; // Troquei para uma fonte que costuma bloquear menos
+        const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
+
+        // Notícias de Reserva (Fallback) - Para o site nunca ficar vazio
+        const BACKUP_NEWS = [
+            {
+                title: "Receita Federal atualiza regras para declaração do IRPF 2026",
+                pubDate: "2026-01-10 08:00:00",
+                link: "https://www.gov.br/receitafederal"
+            },
+            {
+                title: "Simples Nacional: confira os novos limites de faturamento para MEI e ME",
+                pubDate: "2026-01-09 14:30:00",
+                link: "#"
+            },
+            {
+                title: "Reforma Tributária: como preparar sua empresa para as mudanças no IVA",
+                pubDate: "2026-01-08 10:15:00",
+                link: "#"
+            }
+        ];
+
+        function renderNews(items) {
+            const container = document.getElementById('news-container');
+            container.innerHTML = ''; // Limpa o esqueleto/loading
+
+            items.forEach((item, index) => {
+                // Formatação de data segura
+                let dateFormatted;
+                try {
+                    const dateObj = new Date(item.pubDate.replace(/-/g, "/")); // Fix para compatibilidade Safari/alguns browsers
+                    dateFormatted = dateObj.toLocaleDateString('pt-BR');
+                } catch (e) {
+                    dateFormatted = "Recente";
+                }
+
+                const card = `
+                    <article class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition flex flex-col h-full" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="flex items-center gap-2 mb-4 text-xs font-bold text-accent-600 uppercase tracking-wide">
+                            <i data-lucide="calendar" class="w-3 h-3"></i>
+                            ${dateFormatted}
+                        </div>
+                        <h3 class="text-lg font-bold text-corporate-900 mb-3 line-clamp-3 leading-snug">
+                            ${item.title}
+                        </h3>
+                        <div class="mt-auto pt-4">
+                            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-bold text-corporate-700 hover:text-accent-500 transition">
+                                Ler completa <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+                container.innerHTML += card;
+            });
+            
+            lucide.createIcons(); // Recarrega ícones
+        }
+
+        async function fetchNews() {
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+
+                if (data.status === 'ok' && data.items.length > 0) {
+                    // Sucesso: Usa as notícias da API
+                    renderNews(data.items.slice(0, 3));
+                } else {
+                    throw new Error('API retornou status inválido ou vazio');
+                }
+            } catch (error) {
+                console.warn("API indisponível, carregando backup...", error);
+                // Erro: Usa as notícias de backup (Silent Fail)
+                renderNews(BACKUP_NEWS);
+                
+                // Opcional: Avisar no console apenas para o dev
+                document.querySelector('#news span.text-slate-500').innerHTML += ' <span class="text-xs text-amber-500">(Modo Offline)</span>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchNews);
+
+    </script>
+</body>
+</html>
