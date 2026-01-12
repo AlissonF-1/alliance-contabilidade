@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contabilidade especializada para empresas de sucesso. Abra sua empresa, reduza impostos e tenha controle financeiro total.">
+    <meta name="description" content="Alliance Contabilidade: Assessoria contábil especializada, abertura de empresas e planejamento tributário em Teresina, PI.">
+    <meta name="theme-color" content="#0B1120">
     <title>Alliance Contabilidade | Inteligência Tributária</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,6 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
@@ -24,18 +24,16 @@
                     fontFamily: { sans: ['"Manrope"', 'sans-serif'] },
                     colors: {
                         corporate: { 
-                            900: '#0B1120', // Azul quase preto (Mais autoridade)
+                            900: '#0B1120', 
                             800: '#151e32', 
                             700: '#334155' 
                         },
                         accent: { 
-                            500: '#C69C6D', // Dourado mais sóbrio/premium
+                            500: '#C69C6D', 
                             600: '#A67C52', 
+                            700: '#855636', // Mais escuro para contraste
                             100: '#F5EFE6' 
                         }
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
                     }
                 }
             }
@@ -43,50 +41,38 @@
     </script>
 
     <style>
-        /* CSS Crítico */
-        html, body { max-width: 100vw; overflow-x: hidden; position: relative; }
+        /* Otimizações de Renderização */
+        html, body { max-width: 100vw; overflow-x: hidden; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
         
-        /* Ticker Otimizado com GPU Acceleration */
+        /* Ticker Animation */
         .ticker-wrap { width: 100%; overflow: hidden; background-color: #0B1120; border-bottom: 1px solid #1e293b; }
-        .ticker { display: inline-block; white-space: nowrap; padding-right: 100%; animation: marquee 40s linear infinite; will-change: transform; }
+        .ticker { display: inline-block; white-space: nowrap; padding-right: 100%; animation: marquee 45s linear infinite; will-change: transform; }
         .ticker:hover { animation-play-state: paused; }
-        
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .ticker-item { display: inline-block; padding: 0 2rem; color: #94a3b8; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        .ticker-item { display: inline-block; padding: 0 2rem; color: #cbd5e1; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
         .ticker-value { color: #C69C6D; font-weight: 800; margin-left: 4px; }
-
-        /* Utilitários */
-        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .input-pro { @apply w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-lg font-bold text-corporate-900 focus:outline-none focus:border-accent-500 transition; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-600 antialiased font-sans">
+<body class="bg-slate-50 text-slate-600 font-sans">
 
     <div class="ticker-wrap h-10 flex items-center shadow-md z-50 relative">
-        <div class="ticker">
-            <div class="ticker-item">USD Comercial: <span id="ticker-usd" class="ticker-value">...</span></div>
+        <div class="ticker" aria-hidden="true"> <div class="ticker-item">USD Comercial: <span id="ticker-usd" class="ticker-value">...</span></div>
             <div class="ticker-item">EUR Comercial: <span id="ticker-eur" class="ticker-value">...</span></div>
             <div class="ticker-item">Selic Meta: <span class="ticker-value">11,25%</span></div>
             <div class="ticker-item">Salário Mínimo 2026: <span class="ticker-value">R$ 1.518,00</span></div>
-            <div class="ticker-item">INPC (Acumulado): <span class="ticker-value">4,62%</span></div>
             <div class="ticker-item border-l border-slate-700 ml-4 pl-4">USD Comercial: <span id="ticker-usd-2" class="ticker-value">...</span></div>
-            <div class="ticker-item">EUR Comercial: <span id="ticker-eur-2" class="ticker-value">...</span></div>
         </div>
     </div>
 
-    <div class="bg-corporate-900 text-slate-300 py-3 text-[11px] md:text-sm border-b border-slate-800">
+    <div class="bg-corporate-900 text-slate-200 py-3 text-[11px] md:text-sm border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div class="flex gap-6">
                 <span class="flex items-center gap-2 font-medium"><i data-lucide="map-pin" class="w-3 h-3 text-accent-500"></i> Business Center, Teresina - PI</span>
                 <span class="hidden md:flex items-center gap-2 font-medium"><i data-lucide="clock" class="w-3 h-3 text-accent-500"></i> Seg à Sex: 08h às 18h</span>
             </div>
             <div class="flex gap-4">
-                <a href="#" aria-label="Instagram" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                <a href="#" aria-label="LinkedIn" class="hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                <a href="#" aria-label="Visite nosso Instagram" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                <a href="#" aria-label="Visite nosso LinkedIn" class="hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
             </div>
         </div>
     </div>
@@ -95,53 +81,56 @@
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-3 group cursor-pointer">
                 <div class="relative">
-                    <div class="w-10 h-10 bg-corporate-900 text-white flex items-center justify-center rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
+                    <div class="w-10 h-10 bg-corporate-900 text-white flex items-center justify-center rounded-lg shadow-lg">
                         <i data-lucide="trending-up" class="w-6 h-6"></i>
                     </div>
-                    <div class="absolute -top-1 -right-1 w-3 h-3 bg-accent-500 rounded-full border-2 border-white"></div>
                 </div>
                 <div class="leading-tight">
                     <span class="block text-corporate-900 font-extrabold text-xl tracking-tight">ALLIANCE</span>
-                    <span class="block text-slate-400 text-[10px] font-bold uppercase tracking-widest">Contabilidade & Gestão</span>
+                    <span class="block text-slate-500 text-[10px] font-bold uppercase tracking-widest">Contabilidade</span>
                 </div>
             </div>
 
-            <div class="hidden lg:flex items-center gap-8 font-semibold text-slate-600 text-sm">
-                <a href="#home" class="hover:text-corporate-900 transition relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent-500 hover:after:w-full after:transition-all">Início</a>
-                <a href="#servicos" class="hover:text-corporate-900 transition relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent-500 hover:after:w-full after:transition-all">Expertise</a>
-                <a href="#simulador" class="hover:text-corporate-900 text-accent-600 font-bold transition flex items-center gap-2">
+            <div class="hidden lg:flex items-center gap-8 font-bold text-slate-700 text-sm">
+                <a href="#home" class="hover:text-corporate-900 transition py-2">Início</a>
+                <a href="#servicos" class="hover:text-corporate-900 transition py-2">Expertise</a>
+                <a href="#simulador" class="hover:text-corporate-900 text-accent-700 font-extrabold transition flex items-center gap-2 bg-accent-100 px-3 py-1 rounded-full">
                     <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-500 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-600 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-600"></span>
                     </span>
                     Simulador Fiscal
                 </a> 
-                <a href="#contato" class="hover:text-corporate-900 transition">Contato</a>
+                <a href="#contato" class="hover:text-corporate-900 transition py-2">Contato</a>
             </div>
 
             <div class="hidden md:flex items-center gap-3">
-                <a href="https://wa.me/5586988767843" target="_blank" class="bg-corporate-900 hover:bg-corporate-800 text-white text-xs font-bold px-6 py-3 rounded-lg transition shadow-xl hover:shadow-2xl hover:-translate-y-0.5 flex items-center gap-2">
+                <a href="https://wa.me/5586988767843" target="_blank" aria-label="Falar com Especialista no Whatsapp" class="bg-corporate-900 hover:bg-corporate-800 text-white text-xs font-bold px-6 py-3 rounded-lg transition shadow-xl hover:shadow-2xl flex items-center gap-2">
                     Falar com Especialista <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
 
-            <button id="menu-btn" class="lg:hidden text-corporate-900 p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
+            <button id="menu-btn" aria-label="Abrir Menu Principal" class="lg:hidden text-corporate-900 p-2 border border-slate-200 rounded-md">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
         </div>
 
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 p-4 space-y-4 shadow-xl absolute w-full">
-            <a href="#home" class="block font-medium py-2 border-b border-slate-50">Início</a>
-            <a href="#servicos" class="block font-medium py-2 border-b border-slate-50">Expertise</a>
-            <a href="#simulador" class="block font-medium py-2 border-b border-slate-50 text-accent-600 font-bold">Simulador Fiscal</a>
-            <a href="https://wa.me/5586988767843" target="_blank" class="block w-full text-center py-4 bg-corporate-900 text-white rounded-lg font-bold mt-4">WhatsApp Oficial</a>
+            <a href="#home" class="block font-bold text-slate-800 py-3 border-b border-slate-50">Início</a>
+            <a href="#servicos" class="block font-bold text-slate-800 py-3 border-b border-slate-50">Expertise</a>
+            <a href="#simulador" class="block font-bold text-accent-700 py-3 border-b border-slate-50">Simulador Fiscal</a>
+            <a href="https://wa.me/5586988767843" target="_blank" class="block w-full text-center py-4 bg-corporate-900 text-white rounded-lg font-bold mt-4 shadow-lg">WhatsApp Oficial</a>
         </div>
     </nav>
 
     <section id="home" class="relative py-20 md:py-32 lg:py-40 bg-corporate-900 overflow-hidden">
-        <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 z-0 bg-corporate-900">
             <img 
-                src="https://images.unsplash.com/photo-1486406141726-38ac29709d58?auto=format&fit=crop&w=1920&q=80&fm=webp" 
-                class="w-full h-full object-cover opacity-15" 
-                alt="Escritório corporativo moderno"
+                src="https://images.unsplash.com/photo-1486406141726-38ac29709d58?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp" 
+                class="w-full h-full object-cover opacity-20" 
+                alt="Fachada de prédio corporativo moderno com vidro azulado"
+                width="1920"
+                height="1080"
                 fetchpriority="high"
             >
             <div class="absolute inset-0 bg-gradient-to-r from-corporate-900 via-corporate-900/95 to-corporate-900/40"></div>
@@ -149,46 +138,48 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm rounded-full text-accent-500 text-[11px] font-bold uppercase tracking-wider mb-8">
-                    <span class="w-2 h-2 rounded-full bg-accent-500"></span> Assessoria Tributária de Alta Performance
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-800/80 border border-slate-700/50 backdrop-blur-sm rounded-full text-accent-500 text-[11px] font-bold uppercase tracking-wider mb-8">
+                    <span class="w-2 h-2 rounded-full bg-accent-500"></span> Assessoria Tributária Premium
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
-                    Sua contabilidade deve gerar <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-amber-200">lucro</span>, não despesa.
+                    Contabilidade estratégica para <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-amber-200">lucrar mais.</span>
                 </h1>
-                <p class="text-slate-400 text-lg mb-10 max-w-lg leading-relaxed font-light">
-                    Especialistas em inteligência tributária e BPO Financeiro. Transformamos dados contábeis em decisões estratégicas para o seu negócio escalar com segurança.
+                <p class="text-slate-300 text-lg mb-10 max-w-lg leading-relaxed font-light">
+                    Transformamos dados contábeis em inteligência para o seu negócio. Reduza impostos legalmente e tenha controle total do seu fluxo de caixa.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 w-full">
-                    <a href="https://wa.me/5586988767843" class="w-full sm:w-auto text-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition shadow-lg shadow-accent-500/20 flex justify-center items-center gap-2">
+                    <a href="https://wa.me/5586988767843" class="w-full sm:w-auto text-center px-8 py-4 bg-accent-600 hover:bg-accent-700 text-white font-bold rounded-lg transition shadow-lg shadow-accent-900/20 flex justify-center items-center gap-2 focus:ring-4 focus:ring-accent-500/50">
                         Solicitar Proposta <i data-lucide="chevron-right" class="w-4 h-4"></i>
                     </a>
-                    <a href="#simulador" class="w-full sm:w-auto text-center px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-lg transition backdrop-blur-sm">
+                    <a href="#simulador" class="w-full sm:w-auto text-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-lg transition backdrop-blur-sm focus:ring-4 focus:ring-white/30">
                         Simular Economia
                     </a>
                 </div>
-                <div class="mt-12 flex items-center gap-8 text-slate-500 text-sm font-medium">
-                    <div class="flex items-center gap-2"><i data-lucide="shield-check" class="text-accent-500"></i> CRC Regularizado</div>
-                    <div class="flex items-center gap-2"><i data-lucide="award" class="text-accent-500"></i> +15 Anos de Mercado</div>
+                
+                <div class="mt-12 flex items-center gap-8 text-slate-400 text-sm font-medium">
+                    <div class="flex items-center gap-2"><i data-lucide="check-circle" class="text-accent-500 w-5 h-5"></i> CRC Regularizado</div>
+                    <div class="flex items-center gap-2"><i data-lucide="award" class="text-accent-500 w-5 h-5"></i> +15 Anos de Mercado</div>
                 </div>
             </div>
             
             <div class="hidden lg:block relative" data-aos="fade-left" data-aos-delay="200">
-                <div class="absolute -inset-4 bg-accent-500/20 rounded-2xl blur-2xl"></div>
+                <div class="absolute -inset-4 bg-accent-500/10 rounded-2xl blur-3xl"></div>
                 <img 
-                    src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80&fm=webp" 
+                    src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&h=600&q=80&fm=webp" 
                     class="relative rounded-2xl shadow-2xl border border-slate-700/50 w-full object-cover h-[500px]"
-                    alt="Reunião estratégica de contadores"
+                    alt="Equipe de contadores em reunião estratégica analisando documentos"
+                    width="800"
+                    height="600"
                     loading="lazy"
                 >
                 <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 max-w-xs animate-bounce" style="animation-duration: 3s;">
                     <div class="flex items-center gap-4 mb-3">
-                        <div class="bg-green-100 p-2 rounded-lg text-green-600"><i data-lucide="trending-down" class="w-6 h-6"></i></div>
+                        <div class="bg-green-100 p-2 rounded-lg text-green-700"><i data-lucide="trending-down" class="w-6 h-6"></i></div>
                         <div>
-                            <p class="text-xs text-slate-500 font-bold uppercase">Redução Média</p>
+                            <p class="text-xs text-slate-600 font-bold uppercase">Redução Média</p>
                             <p class="text-xl font-bold text-corporate-900">-20% em Impostos</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-400">Baseado em clientes migrados para o regime correto.</p>
                 </div>
             </div>
         </div>
@@ -198,40 +189,40 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-aos="fade-up">
                 <div class="max-w-2xl">
-                    <h2 class="text-accent-500 font-bold tracking-widest uppercase text-sm mb-3">Nossa Expertise</h2>
-                    <h3 class="text-4xl font-bold text-corporate-900">Soluções Corporativas 360º</h3>
+                    <h2 class="text-accent-700 font-bold tracking-widest uppercase text-sm mb-3">Nossa Expertise</h2>
+                    <p class="text-4xl font-bold text-corporate-900">Soluções Corporativas 360º</p>
                 </div>
-                <p class="text-slate-500 max-w-md text-right md:text-left">
+                <p class="text-slate-600 max-w-md text-right md:text-left text-lg">
                     Não somos apenas "geradores de guia". Atuamos como braço direito da gestão da sua empresa.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="group p-8 rounded-2xl bg-white border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:border-accent-500/30 transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="0">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-accent-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 relative overflow-hidden" data-aos="fade-up">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-accent-600 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
                     <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-900 mb-6 group-hover:bg-corporate-900 group-hover:text-accent-500 transition">
                         <i data-lucide="briefcase" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Legalização de Empresas</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Constituição, alteração e baixa. Analisamos o melhor CNAE e regime tributário para você começar pagando o mínimo legal.</p>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Abertura de Empresas</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Constituição rápida e sem burocracia. Analisamos o melhor CNAE e regime tributário para você começar certo.</p>
                 </div>
 
-                <div class="group p-8 rounded-2xl bg-white border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:border-accent-500/30 transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-accent-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-accent-600 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
                     <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-900 mb-6 group-hover:bg-corporate-900 group-hover:text-accent-500 transition">
                         <i data-lucide="pie-chart" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-corporate-900 mb-3">BPO Financeiro</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Terceirize seu Contas a Pagar/Receber. Tenha relatórios de fluxo de caixa diários sem precisar contratar funcionários internos.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Terceirize seu financeiro. Gestão de contas a pagar/receber e relatórios de fluxo de caixa diários.</p>
                 </div>
 
-                <div class="group p-8 rounded-2xl bg-white border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:border-accent-500/30 transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-accent-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-accent-600 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
                     <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-900 mb-6 group-hover:bg-corporate-900 group-hover:text-accent-500 transition">
                         <i data-lucide="scale" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-corporate-900 mb-3">Planejamento Tributário</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Recuperação de créditos fiscais e elisão fiscal lícita. Monitoramos a legislação para proteger seu patrimônio.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Recuperação de créditos fiscais e elisão fiscal lícita. Monitoramos a legislação para proteger seu patrimônio.</p>
                 </div>
             </div>
         </div>
@@ -239,32 +230,31 @@
 
     <section id="simulador" class="py-24 bg-corporate-900 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-800/20 -skew-x-12 transform translate-x-32 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
-
+        
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-accent-500/10 border border-accent-500/20 rounded-full text-accent-500 text-xs font-bold mb-6">
-                        <i data-lucide="zap" class="w-3 h-3"></i> Diagnóstico Fiscal Gratuito
+                        <i data-lucide="zap" class="w-3 h-3"></i> Diagnóstico Fiscal
                     </div>
                     <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
                         Pessoa Física vs. <span class="text-accent-500">Pessoa Jurídica</span>
                     </h2>
                     <p class="text-slate-300 mb-8 leading-relaxed text-lg font-light">
-                        Muitos profissionais liberais deixam até <strong class="text-white">27,5%</strong> do faturamento na mesa por operarem como CPF. Com a estratégia certa no Simples Nacional, essa alíquota pode cair para <strong class="text-white">6%</strong> ou menos.
+                        Muitos profissionais liberais deixam até <strong class="text-white">27,5%</strong> do faturamento na mesa por operarem como CPF. Com a estratégia certa, essa alíquota pode cair para <strong class="text-white">6%</strong>.
                     </p>
                     
                     <ul class="space-y-4 text-slate-300">
                         <li class="flex items-center gap-3">
-                            <div class="bg-green-500/20 p-1 rounded-full text-green-500"><i data-lucide="check" class="w-4 h-4"></i></div>
-                            <span>Proteção patrimonial (Bens pessoais x Empresa)</span>
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i>
+                            <span>Proteção patrimonial (Separação de bens)</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <div class="bg-green-500/20 p-1 rounded-full text-green-500"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i>
                             <span>Acesso a crédito empresarial mais barato</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <div class="bg-green-500/20 p-1 rounded-full text-green-500"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i>
                             <span>Emissão ilimitada de Notas Fiscais</span>
                         </li>
                     </ul>
@@ -273,38 +263,38 @@
                 <div class="bg-white rounded-2xl p-8 shadow-2xl border border-slate-100" data-aos="fade-left">
                     <div class="text-center mb-8">
                         <h3 class="text-2xl font-bold text-corporate-900">Simulador de Economia</h3>
-                        <p class="text-slate-500 text-sm mt-2">Descubra quanto você pode economizar por ano.</p>
+                        <p class="text-slate-600 text-sm mt-2">Descubra quanto você pode economizar por ano.</p>
                     </div>
                     
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2 tracking-wide">Faturamento Mensal (R$)</label>
-                            <input type="text" id="calc-faturamento" placeholder="Ex: 15.000,00" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-lg text-xl font-bold text-corporate-900 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition">
+                            <label for="calc-faturamento" class="block text-xs font-bold text-slate-600 uppercase mb-2 tracking-wide">Faturamento Mensal (R$)</label>
+                            <input type="text" id="calc-faturamento" name="faturamento" placeholder="Ex: 15.000,00" class="w-full px-4 py-4 bg-slate-50 border border-slate-300 rounded-lg text-xl font-bold text-corporate-900 focus:outline-none focus:ring-2 focus:ring-accent-600 focus:border-transparent transition">
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2 tracking-wide">Ramo de Atividade</label>
+                            <label for="calc-setor" class="block text-xs font-bold text-slate-600 uppercase mb-2 tracking-wide">Ramo de Atividade</label>
                             <div class="relative">
-                                <select id="calc-setor" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent appearance-none">
+                                <select id="calc-setor" name="setor" class="w-full px-4 py-4 bg-slate-50 border border-slate-300 rounded-lg font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-accent-600 focus:border-transparent appearance-none">
                                     <option value="servico">Prestação de Serviços (Médicos, Devs, Arquit.)</option>
                                     <option value="comercio">Comércio / Vendas</option>
                                 </select>
-                                <i data-lucide="chevron-down" class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none"></i>
+                                <i data-lucide="chevron-down" class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 pointer-events-none"></i>
                             </div>
                         </div>
 
-                        <button onclick="calcularEconomia()" class="w-full bg-corporate-900 hover:bg-corporate-800 text-white font-bold py-4 rounded-xl transition shadow-lg hover:shadow-xl transform active:scale-95 flex justify-center items-center gap-2">
+                        <button onclick="calcularEconomia()" class="w-full bg-corporate-900 hover:bg-corporate-800 text-white font-bold py-4 rounded-xl transition shadow-lg hover:shadow-xl transform active:scale-95 flex justify-center items-center gap-2 focus:ring-4 focus:ring-corporate-700">
                             Calcular Agora <i data-lucide="calculator" class="w-4 h-4"></i>
                         </button>
                     </div>
 
-                    <div id="resultado-calc" class="hidden mt-8 pt-8 border-t border-dashed border-slate-200 text-center animate-fade-in">
-                        <p class="text-sm text-slate-500 font-medium mb-1">Potencial de Economia Anual:</p>
-                        <p class="text-4xl font-black text-green-600 mb-2 tracking-tight" id="valor-economia">R$ 0,00</p>
-                        <p class="text-[10px] text-slate-400 mb-6 max-w-xs mx-auto">Estimativa baseada na diferença entre alíquota máxima de IRPF (27,5%) e anexos iniciais do Simples Nacional.</p>
+                    <div id="resultado-calc" class="hidden mt-8 pt-8 border-t border-dashed border-slate-200 text-center animate-fade-in" aria-live="polite">
+                        <p class="text-sm text-slate-600 font-bold mb-1">Potencial de Economia Anual:</p>
+                        <p class="text-4xl font-black text-green-700 mb-2 tracking-tight" id="valor-economia">R$ 0,00</p>
+                        <p class="text-[11px] text-slate-500 mb-6 max-w-xs mx-auto leading-tight">Estimativa baseada na diferença entre alíquota IRPF e Simples Nacional. Consulte um contador para dados exatos.</p>
                         
-                        <a id="btn-zap-calc" href="#" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl text-sm transition shadow-lg shadow-green-500/30 flex items-center justify-center gap-2">
-                            <i data-lucide="whatsapp" class="w-5 h-5"></i> Quero pagar menos impostos
+                        <a id="btn-zap-calc" href="#" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl text-sm transition shadow-lg flex items-center justify-center gap-2 focus:ring-4 focus:ring-green-500/50">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i> Quero pagar menos impostos
                         </a>
                     </div>
                 </div>
@@ -316,27 +306,16 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between mb-10">
                 <h2 class="text-2xl font-bold text-corporate-900 flex items-center gap-3">
-                    <span class="w-1 h-8 bg-accent-500 rounded-full"></span>
+                    <span class="w-1 h-8 bg-accent-600 rounded-full"></span>
                     Giro Contábil
                 </h2>
-                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest hidden md:block">Atualização em Tempo Real</span>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest hidden md:block">Atualização em Tempo Real</span>
             </div>
             
             <div id="news-container" class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm h-40 animate-pulse">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm h-40 animate-pulse" aria-hidden="true">
                     <div class="h-4 bg-slate-200 rounded w-3/4 mb-4"></div>
                     <div class="h-3 bg-slate-100 rounded w-full mb-2"></div>
-                    <div class="h-3 bg-slate-100 rounded w-5/6"></div>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm h-40 animate-pulse hidden md:block">
-                    <div class="h-4 bg-slate-200 rounded w-3/4 mb-4"></div>
-                    <div class="h-3 bg-slate-100 rounded w-full mb-2"></div>
-                    <div class="h-3 bg-slate-100 rounded w-5/6"></div>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm h-40 animate-pulse hidden md:block">
-                    <div class="h-4 bg-slate-200 rounded w-3/4 mb-4"></div>
-                    <div class="h-3 bg-slate-100 rounded w-full mb-2"></div>
-                    <div class="h-3 bg-slate-100 rounded w-5/6"></div>
                 </div>
             </div>
         </div>
@@ -348,51 +327,43 @@
                 <div class="text-white font-bold text-2xl mb-4 flex items-center gap-2">
                     <i data-lucide="trending-up" class="w-6 h-6 text-accent-500"></i> ALLIANCE
                 </div>
-                <p class="text-slate-500 mb-6 max-w-sm">Soluções contábeis modernas para empresas que buscam crescimento sólido e compliance fiscal.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent-500 hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent-500 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                </div>
+                <p class="text-slate-400 mb-6 max-w-sm">Soluções contábeis modernas para empresas que buscam crescimento sólido e compliance fiscal.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-6">Links Rápidos</h4>
+                <p class="text-white font-bold mb-6 text-base">Navegação</p>
                 <ul class="space-y-3">
-                    <li><a href="#home" class="hover:text-accent-500 transition">Início</a></li>
-                    <li><a href="#servicos" class="hover:text-accent-500 transition">Serviços</a></li>
-                    <li><a href="#simulador" class="hover:text-accent-500 transition">Simulador</a></li>
-                    <li><a href="https://wa.me/5586988767843" class="hover:text-accent-500 transition">Fale Conosco</a></li>
+                    <li><a href="#home" class="hover:text-accent-500 transition underline-offset-4 hover:underline">Início</a></li>
+                    <li><a href="#servicos" class="hover:text-accent-500 transition underline-offset-4 hover:underline">Serviços</a></li>
+                    <li><a href="#simulador" class="hover:text-accent-500 transition underline-offset-4 hover:underline">Simulador</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-6">Contato</h4>
+                <p class="text-white font-bold mb-6 text-base">Contato</p>
                 <ul class="space-y-3">
                     <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-accent-500 shrink-0"></i> Teresina, PI - Brasil</li>
                     <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-accent-500 shrink-0"></i> (86) 98876-7843</li>
-                    <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-accent-500 shrink-0"></i> contato@alliance.com</li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-            <p>&copy; 2026 Alliance Contabilidade. Todos os direitos reservados.</p>
-            <p>Desenvolvido com excelência por <span class="text-white font-bold">AF Digital</span></p>
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <p>&copy; 2026 Alliance Contabilidade.</p>
+            <p>Dev: AF Digital</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5586988767843" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-[100] animate-bounce hover:scale-110 transition group">
-        <i data-lucide="message-circle" class="w-8 h-8 group-hover:rotate-12 transition"></i>
-        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-corporate-900 px-3 py-1 rounded-lg text-xs font-bold shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">Falar Agora</span>
+    <a href="https://wa.me/5586988767843" target="_blank" aria-label="Falar no Whatsapp Agora" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl z-[100] animate-bounce hover:scale-110 transition group focus:ring-4 focus:ring-green-500/50">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js" defer></script>
 
-    <script>
-        // Inicialização Otimizada
-        document.addEventListener('DOMContentLoaded', () => {
+    <script defer>
+        // Use defer para garantir que scripts rodem após o HTML estar pronto
+        window.addEventListener('load', () => {
             lucide.createIcons();
             AOS.init({ once: true, duration: 800, offset: 50 });
             
-            // Máscara
             const inputFaturamento = document.getElementById('calc-faturamento');
             if(inputFaturamento) {
                 IMask(inputFaturamento, {
@@ -413,39 +384,26 @@
 
         const PHONE_NUMBER = "5586988767843"; 
 
-        // Menu Mobile Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => { 
-            mobileMenu.classList.toggle('hidden'); 
+        // Menu Mobile (Sem dependências externas)
+        document.getElementById('menu-btn').addEventListener('click', () => { 
+            document.getElementById('mobile-menu').classList.toggle('hidden'); 
         });
 
-        // 1. TICKER API (Tratamento de Erro Silencioso)
         async function updateTicker() {
             try {
                 const res = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL');
-                if(!res.ok) throw new Error('Falha API');
+                if(!res.ok) throw new Error('API Error');
                 const data = await res.json();
                 
                 const format = (val) => parseFloat(val).toFixed(2).replace('.', ',');
                 const usd = format(data.USDBRL.bid);
                 const eur = format(data.EURBRL.bid);
 
-                ['ticker-usd', 'ticker-usd-2'].forEach(id => {
-                    const el = document.getElementById(id);
-                    if(el) el.innerText = `R$ ${usd}`;
-                });
-                ['ticker-eur', 'ticker-eur-2'].forEach(id => {
-                    const el = document.getElementById(id);
-                    if(el) el.innerText = `R$ ${eur}`;
-                });
-            } catch (e) {
-                // Fallback silencioso
-                console.warn("Ticker offline");
-            }
+                document.querySelectorAll('[id^="ticker-usd"]').forEach(el => el.innerText = `R$ ${usd}`);
+                document.querySelectorAll('[id^="ticker-eur"]').forEach(el => el.innerText = `R$ ${eur}`);
+            } catch (e) { console.warn("Ticker offline"); }
         }
 
-        // 2. CALCULADORA LÓGICA
         function calcularEconomia() {
             const input = document.getElementById('calc-faturamento');
             const valorStr = input.value.replace(/\./g, '').replace(',', '.');
@@ -457,7 +415,6 @@
                 return;
             }
 
-            // Lógica Presuntiva (Comparativo visual)
             let aliquotaSimples = setor === 'servico' ? 0.06 : 0.04;
             let aliquotaPF = 0.275; 
 
@@ -465,24 +422,16 @@
             const impostoPJ = faturamento * aliquotaSimples;
             const economiaAnual = (impostoPF - impostoPJ) * 12;
 
-            const divResultado = document.getElementById('resultado-calc');
-            const txtValor = document.getElementById('valor-economia');
-            const btnZap = document.getElementById('btn-zap-calc');
-
-            divResultado.classList.remove('hidden');
+            document.getElementById('resultado-calc').classList.remove('hidden');
             const valorFormatado = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(economiaAnual);
-            
-            // Animação numérica simples
-            txtValor.innerText = valorFormatado;
+            document.getElementById('valor-economia').innerText = valorFormatado;
 
-            const msg = `Olá! Fiz a simulação no site da Alliance. Faturamento de R$ ${input.value}. O sistema calculou uma economia potencial de ${valorFormatado}/ano abrindo CNPJ. Gostaria de agendar uma reunião.`;
-            btnZap.href = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(msg)}`;
+            const msg = `Olá! Fiz a simulação no site. Faturamento de R$ ${input.value}. Economia calculada de ${valorFormatado}/ano abrindo CNPJ. Quero saber mais.`;
+            document.getElementById('btn-zap-calc').href = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(msg)}`;
         }
 
-        // 3. NEWS FEED (RSS2JSON - Otimizado)
         async function fetchNews() {
             const container = document.getElementById('news-container');
-            // Usando feed mais leve se possível, ou mantendo o atual com timeout
             const API_RSS = `https://api.rss2json.com/v1/api.json?rss_url=https://www.jornalcontabil.com.br/feed/`;
             
             try {
@@ -491,18 +440,17 @@
                 const data = await response.json();
                 
                 container.innerHTML = '';
-                // Pegar apenas 3 itens e limpar HTML da descrição
                 data.items.slice(0, 3).forEach(item => {
                     container.innerHTML += `
-                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition flex flex-col h-full group">
-                            <div class="text-[10px] font-bold text-accent-500 uppercase mb-2">${new Date(item.pubDate).toLocaleDateString('pt-BR')}</div>
-                            <h3 class="font-bold text-corporate-900 mb-3 line-clamp-2 leading-tight group-hover:text-accent-600 transition">${item.title}</h3>
-                            <a href="${item.link}" target="_blank" class="text-slate-500 text-xs font-bold flex items-center gap-1 mt-auto hover:text-corporate-900">Ler completa <i data-lucide="arrow-up-right" class="w-3 h-3"></i></a>
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col h-full group">
+                            <div class="text-[10px] font-bold text-accent-600 uppercase mb-2">${new Date(item.pubDate).toLocaleDateString('pt-BR')}</div>
+                            <h3 class="font-bold text-corporate-900 mb-3 line-clamp-2 group-hover:text-accent-700 transition">${item.title}</h3>
+                            <a href="${item.link}" target="_blank" class="text-slate-600 text-xs font-bold flex items-center gap-1 mt-auto hover:text-corporate-900" aria-label="Ler notícia completa: ${item.title}">Ler completa <i data-lucide="arrow-up-right" class="w-3 h-3"></i></a>
                         </div>`;
                 });
-                lucide.createIcons(); // Recarrega ícones nos novos elementos
+                lucide.createIcons();
             } catch (e) {
-                container.innerHTML = '<div class="col-span-3 text-center py-8 text-slate-400 bg-slate-50 rounded-lg text-sm">Não foi possível carregar as notícias no momento.</div>';
+                container.innerHTML = '<div class="col-span-3 text-center py-8 text-slate-500 bg-slate-50 rounded-lg text-sm">Notícias indisponíveis no momento.</div>';
             }
         }
     </script>
